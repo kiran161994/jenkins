@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("Git repository"){
+            steps{
+                git credentialsId: 'github', url: 'https://github.com/kiran161994/jenkins.git'
+            }
+        }
+    }    
+}
